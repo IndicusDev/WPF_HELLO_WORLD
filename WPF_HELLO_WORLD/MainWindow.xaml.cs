@@ -23,10 +23,19 @@ namespace WPF_HELLO_WORLD
         public MainWindow()
         {
             InitializeComponent();
+            System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
         }
 
         private void BTN_HELLO_Click(object sender, RoutedEventArgs e) =>
             //Serve Hello World MsgBox
             _ = MessageBox.Show("Hello World!", "Hello", MessageBoxButton.OK, MessageBoxImage.Information);
+        void timer_Tick(object sender, EventArgs e)
+        {
+            LAB_DTIME_TICKER.Content = DateTime.Now.ToLongDateString() + ' ' + DateTime.Now.ToLongTimeString();
+        }
+
     }
 }
