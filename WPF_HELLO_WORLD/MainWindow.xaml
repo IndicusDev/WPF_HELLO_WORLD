@@ -1,0 +1,14 @@
+﻿<Window x:Class="WPF_HELLO_WORLD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_HELLO_WORLD"
+        mc:Ignorable="d"
+        Title="WPF Hello World" Height="600" Width="800" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" MinWidth="400" MinHeight="300" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana" ResizeMode="CanResizeWithGrip">
+    <Grid>
+        <Button x:Name="BTN_HELLO" Content="Hello World" HorizontalAlignment="Left" Margin="23,24,0,0" VerticalAlignment="Top" Width="81" Click="BTN_HELLO_Click" Height="27" BorderBrush="#FF494CBF" Foreground="#FF425A9C" Background="#FF88D1E1"/>
+        <Label x:Name="LAB_HELLO" Content="Serves the 'Hello World!' message box" HorizontalAlignment="Left" Margin="122,24,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
